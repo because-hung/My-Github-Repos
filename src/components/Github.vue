@@ -80,5 +80,10 @@ export default {
       this.Scroll();
     });
   },
+  beforeDestroy(){
+    window.removeEventListener("scroll",() => { // 如果換頁的話 移除監聽
+        this.Scroll();
+    });
+     }
 };
 </script>
